@@ -1,7 +1,7 @@
-ScheduleShow.destroy_all
-Show.destroy_all
-Schedule.destroy_all
-User.destroy_all
+# ScheduleShow.destroy_all
+# Show.destroy_all
+# Schedule.destroy_all
+# User.destroy_all
 
 shows = Show.create!([
   { name: "Jazz Eruption", time: "7-9pm" },
