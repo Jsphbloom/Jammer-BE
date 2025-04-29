@@ -22,7 +22,7 @@ users = User.create!([
 ])
 
 users.each do |user|
-  2.times do |i|
+  5.times do |i|
     schedule = user.schedules.create!(name: "Schedule ##{i + 1}")
 
     schedule.shows << shows.sample(3)
