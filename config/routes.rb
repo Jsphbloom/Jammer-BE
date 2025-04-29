@@ -14,9 +14,9 @@ Rails.application.routes.draw do
         resources :schedules, only: [:index, :create]  # /api/v1/users/:user_id/schedules
       end
 
-      resources :schedules, only: [:show]  # /api/v1/schedules/:id
-
-      resources :schedule_shows, only: [:destroy] # /api/v1/schedule_shows/:id
+      resources :schedules, only: [:show] do
+        resources :schedule_shows, only: [:index, :destroy]  # /api/v1/schedules/:schedule_id/schedule_shows
+      end
     end
   end
 end
