@@ -3,12 +3,12 @@ module Api
     class UsersController < ApplicationController
       def index
         users = User.all
-        render json: users, include: { schedules: { include: :shows } }
+        render json: users
       end
 
       def show
         user = User.find(params[:id])
-        render json: user, include: { schedules: { include: :shows } }
+        render json: user
       end
     end
   end

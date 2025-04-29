@@ -42,6 +42,7 @@ group :development, :test do
   gem "pry"
   gem "rspec-rails"
   gem "shoulda-matchers"
+  gem 'rack-cors'
 end
 
 group :test do
