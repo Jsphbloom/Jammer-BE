@@ -4,7 +4,7 @@ module Api
 
       def index
         shows = Show.all
-        render json: shows
+        render json: ShowsSerializer.format_shows(shows)
       end
     end
   end
