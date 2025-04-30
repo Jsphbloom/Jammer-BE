@@ -2,8 +2,12 @@ module Api
   module V1
     class SchedulesController < ApplicationController
       def index
-        user = User.find(params[:user_id])
-        schedules = user.schedules
+        if params[:user_id].present?
+          user = User.find(params[:user_id])
+          schedules = user.schedules
+        else
+          schedules = Schedule.all
+        end
         render json: schedules, include: :shows
       end
 
