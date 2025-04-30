@@ -4,6 +4,8 @@ module Api
 
       def index
         shows = Show.all
-        render json: users
+        render json: shows
       end
     end
+  end
+end

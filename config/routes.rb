@@ -18,7 +18,7 @@ Rails.application.routes.draw do
         resources :schedule_shows, only: [:index, :destroy]  # /api/v1/schedules/:schedule_id/schedule_shows
       end
 
-      resources :shows, only [:index]
+      resources :shows, only: [:index]
     end
   end
 end

@@ -14,8 +14,14 @@ module Api
 
       def create
         user = User.find(params[:user_id])
-        schedule = user.schedules.create!(schedule_params)
-        render json: schedule, status: :created
+        schedule = user.schedules.create!(name: params[:name] || "New Schedule")
+      
+        if params[:show_ids]
+          shows = Show.find(params[:show_ids])
+          schedule.shows << shows
+        end
+      
+        render json: schedule.to_json(include: :shows), status: :created
       end
 
       private
