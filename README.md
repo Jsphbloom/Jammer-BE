@@ -11,14 +11,14 @@ This is the backend side of Jammer, an application for managing a busy schedule 
 - Serialization for clean and structured API responses.
 
 # Users
-GET /api/v1/users: Retrieve all users.
-GET /api/v1/users/:id: Retrieve a specific user.
-GET /api/v1/users/:user_id/schedules: Retrieve all schedules for a specific user.
-POST /api/v1/users/:user_id/schedules: Create a new schedule for a specific user.
+- GET /api/v1/users: Retrieve all users.
+- GET /api/v1/users/:id: Retrieve a specific user.
+- GET /api/v1/users/:user_id/schedules: Retrieve all schedules for a specific user.
+- POST /api/v1/users/:user_id/schedules: Create a new schedule for a specific user.
 # Schedules
-GET /api/v1/schedules: Retrieve all schedules.
-GET /api/v1/schedules/:id: Retrieve a specific schedule.
-GET /api/v1/schedules/:schedule_id/schedule_shows: Retrieve all schedule shows for a specific schedule.
-DELETE /api/v1/schedules/:schedule_id/schedule_shows/:id: Delete a specific schedule show.
+- GET /api/v1/schedules: Retrieve all schedules.
+- GET /api/v1/schedules/:id: Retrieve a specific schedule.
+- GET /api/v1/schedules/:schedule_id/schedule_shows: Retrieve all schedule shows for a specific schedule.
+- DELETE /api/v1/schedules/:schedule_id/schedule_shows/:id: Delete a specific schedule show.
 # Shows
-GET /api/v1/shows: Retrieve all shows.
+- GET /api/v1/shows: Retrieve all shows.
